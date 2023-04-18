@@ -1,0 +1,30 @@
+<h1>Formulario productos</h1>
+
+<div class="formulario">
+
+  <label for="id">idProducto: </label> <input type="number" [(ngModel)]="cuadroId"><br><br>
+  <label for="nombreProducto">Nombre producto: </label> <input type="text" [(ngModel)]="cuadroNombre"><br><br>
+  <label for="cantidad">Cantidad: </label> <input type="number" [(ngModel)]="cuadroCantidad"><br><br>
+  <label for="precio">Precio: </label> <input type="number" [(ngModel)]="cuadroPrecio"><br><br>
+  <label for="tipo" [(ngModel)]="cuadroTipo">Tipo Producto: </label>
+  <select name="tipo" id="tipo">
+    <option value="0">Alimentos perecederos</option>
+    <option value="1">Alimentos</option>
+    <option value="2">Bebidas</option>
+    <option value="3">Limpieza</option>
+  </select>
+
+</div>
+<br>
+<input type="submit" value="Añadir al carrito" (click)="introduceProducto()"> <br><br>
+<!--NgFor: Para recorrer el array productos como un bucle forEach-->
+<h2>Carrito: </h2>
+
+<!--Agregamos el componente hijo dentro del padre
+Nos traemos la directiva aquí y nos llevamos el div que nos devuelve los productos al html
+del componente hijo-->
+<app-producto-hijo *ngFor="let producto of productos; let i=index" [productoLista]="producto" [iterador]="i"></app-producto-hijo>
+
+
+
+

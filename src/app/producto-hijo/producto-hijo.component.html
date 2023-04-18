@@ -1,0 +1,13 @@
+<!--Pasamos la información del componente padre al hijo porque a priori no reconoce nada
+(ni producto ni i). Tenemos que crear nuevos indentificadores en la etiqueta HTML del hijo-->
+<!--Escribimos los nuevos identificadores-->
+<div >
+
+  <p>Producto: {{iterador+1}}</p>
+  <p>Id: {{productoLista.idProducto}}</p>
+  <p>Nombre: {{productoLista.nombre}}</p>
+  <p>Precio: {{productoLista.precio}}</p>
+  <p>Cantidad: {{productoLista.cantidadExistencia}}</p>
+  <p>Tipo {{opciones[productoLista.tipoProducto]}}</p>
+  <br>
+</div>
