@@ -1,0 +1,17 @@
+<hr><br><br>
+
+<h1>FORMULARIO HIJO PEDIDOS</h1>
+
+<div>
+
+  <label for="id">Id: </label>Id pedido: <input type="number" [(ngModel)]="pedido.idPedido"><br><br>
+  <label for="id_cliente"></label>Id cliente: <input type="number" [(ngModel)]="pedido.idCliente"><br><br>
+  <label for="nombreCliente">Nombre cliente: </label><input type="text" [(ngModel)]="pedido.nombreCliente"><br><br>
+  <label for="totalProductos">Productos totales: </label><input type="number" [(ngModel)]="pedido.totalProductos"><br><br>
+  <label for="importeTotal">Importe total: </label><input type="number" [(ngModel)]="pedido.importeTotal"><br><br>
+
+</div>
+
+<button (click)="incluirPedido()">Enviar pedido</button>
+
+

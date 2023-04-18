@@ -1,0 +1,12 @@
+<!--Recorremos el Array con bucle forEach-->
+<div *ngFor="let pedido of arrayPedidosPadre">
+
+  <p>Id pedido: {{pedido.idPedido}}</p>
+  <p>Id cliente: {{pedido.idCliente}}</p>
+  <p>Nombre cliente: {{pedido.nombreCliente}}</p>
+  <p>Total productos: {{pedido.totalProductos}}</p>
+  <p>Importe total: {{pedido.importeTotal}}</p>
+
+</div>
+
+<app-formulario-hijo (envioDatos)="recibirPedidoDelHijo($event)"></app-formulario-hijo>
