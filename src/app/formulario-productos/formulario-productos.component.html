@@ -6,12 +6,9 @@
   <label for="nombreProducto">Nombre producto: </label> <input type="text" [(ngModel)]="cuadroNombre"><br><br>
   <label for="cantidad">Cantidad: </label> <input type="number" [(ngModel)]="cuadroCantidad"><br><br>
   <label for="precio">Precio: </label> <input type="number" [(ngModel)]="cuadroPrecio"><br><br>
-  <label for="tipo" [(ngModel)]="cuadroTipo">Tipo Producto: </label>
-  <select name="tipo" id="tipo">
-    <option value="0">Alimentos perecederos</option>
-    <option value="1">Alimentos</option>
-    <option value="2">Bebidas</option>
-    <option value="3">Limpieza</option>
+  <label for="tipo">Tipo Producto: </label>
+  <select name="tipo" id="tipo" [(ngModel)]="cuadroTipo">
+    <option *ngFor="let item of opciones" [value]="item">{{item}}</option>
   </select>
 
 </div>

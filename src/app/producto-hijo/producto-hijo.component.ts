@@ -12,5 +12,4 @@ export class ProductoHijoComponent {
   nuevos asignados en el padre*/
   @Input() productoLista:Producto;
   @Input() iterador:number;
-  opciones: string[] = Object.values(tipoProducto).map((v,i,arr)=> v as string);
 }

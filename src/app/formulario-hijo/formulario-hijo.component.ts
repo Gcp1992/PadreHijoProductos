@@ -14,9 +14,10 @@ export class FormularioHijoComponent {
   //Hacemos una instancia:
   pedido:Pedido=new Pedido(0,0,"",0,0);
 
+  //Paso 1: el ts de l hijo tiene el output
+  //Es una instancia de  envioDatos es un objeto de tipo eventEmitter al que se le pasa un Array de objetos(Pedidos)
+
   @Output() envioDatos = new EventEmitter<Pedido[]>();
-
-
 
   incluirPedido(){
     //Añadimos al array nuestra instancia creada

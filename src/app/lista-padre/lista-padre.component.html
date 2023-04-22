@@ -1,3 +1,8 @@
+<!--3ªº paso: el output. envioDatos es el nombre que le he dado a la instancia de objeto tipo eventoç
+Este llama a una función que es la que le pasará un evento
+Función desarrollada en el ts de este mismo componente padre-->
+<app-formulario-hijo (envioDatos)="recibirPedidoDelHijo($event)"></app-formulario-hijo>
+
 <!--Recorremos el Array con bucle forEach-->
 <div *ngFor="let pedido of arrayPedidosPadre">
 
@@ -8,5 +13,3 @@
   <p>Importe total: {{pedido.importeTotal}}</p>
 
 </div>
-
-<app-formulario-hijo (envioDatos)="recibirPedidoDelHijo($event)"></app-formulario-hijo>
